@@ -11,6 +11,7 @@ import {
 import Layout from "./Layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import User from "./components/User/User.jsx";
+import GitHub from "./GitHub/GitHub.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,8 @@ const router = createBrowserRouter(
       <Route path="user" element={<User />}>
         <Route path=":userid" element={<User />} />
       </Route>
+      <Route path="github" element={<GitHub />} />
+      <Route path="*" element={<div>404 Not Found</div>} />
     </Route>,
   ),
 );
